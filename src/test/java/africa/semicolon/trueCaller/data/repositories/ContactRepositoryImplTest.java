@@ -145,6 +145,7 @@ class ContactRepositoryImplTest {
         assertEquals("Ada", contact5.getFirstName());
 
 
+
         Contact contact1 = contactRepository.save(contact);
         Contact contact2 = contactRepository.findByPhoneNumber("1234");
         assertThrows(NoContactException.class, ()-> contactRepository.findByPhoneNumber("7777"));

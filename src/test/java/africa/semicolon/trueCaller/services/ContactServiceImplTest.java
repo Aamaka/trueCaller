@@ -46,6 +46,43 @@ class ContactServiceImplTest {
         assertEquals(3, contact1.getId());
     }
 
-   
+   @Test
+    public void findContactByPhoneNumber(){
+       contactService.addContact("asa", "1234");
+       contactService.addContact("bae", "bola","4567");
+       contactService.addContact("kemi", "1235");
+
+       Contact contact1 = contactService.findByPhoneNumber("4567");
+       assertEquals("bae", contact1.getFirstName());
+   }
+
+   @Test
+    public void testToFindByLastName(){
+       contactService.addContact("asa", "faith", "1234");
+       contactService.addContact("bae", "bola","4567");
+       contactService.addContact("kemi", "peace", "1567");
+
+       Contact contact1 = contactService.findByLastName("bola");
+       assertEquals(2, contact1.getId());
+       assertEquals("bae", contact1.getFirstName());
+   }
+
+   @Test
+    public void testToDeleteAndUpdateContact(){
+       contactService.addContact("asa", "faith", "1234");
+       contactService.addContact("bae", "bola","4567");
+       contactService.addContact("kemi", "peace", "1567");
+       Contact contact = contactService.findById(3);
+       assertEquals("peace", contact.getLastName());
+       contactService.delete(contact);
+       assertEquals(2, contactService.count());
+
+       Contact contact1 = contactService.findById(2);
+       contact1.setFirstName("ade");
+       contact1.setLastName("nut");
+       Contact contact2 = contactService.update(contact1);
+       assertEquals("nut", contact2.getLastName());
+       assertEquals(2, contactService.count());
+   }
 
 }

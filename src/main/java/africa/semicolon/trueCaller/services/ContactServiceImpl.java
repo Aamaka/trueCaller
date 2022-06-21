@@ -5,7 +5,7 @@ import africa.semicolon.trueCaller.data.repositories.ContactRepository;
 
 public class ContactServiceImpl implements ContactService{
 
-    private ContactRepository contactRepository;
+    private final ContactRepository contactRepository;
 
     public ContactServiceImpl(ContactRepository contactRepository) {
         this.contactRepository = contactRepository;
@@ -31,6 +31,31 @@ public class ContactServiceImpl implements ContactService{
     @Override
     public Contact findByFirstName(String firstName) {
         return contactRepository.findByFirstName(firstName);
+    }
+
+    @Override
+    public Contact findByLastName(String lastName) {
+        return contactRepository.findByLastName(lastName);
+    }
+
+    @Override
+    public Contact findByPhoneNumber(String phoneNumber) {
+        return contactRepository.findByPhoneNumber(phoneNumber);
+    }
+
+    @Override
+    public Contact update(Contact contact) {
+        return contactRepository.update(contact);
+    }
+
+    @Override
+    public void delete(Contact contact) {
+        contactRepository.delete(contact);
+    }
+
+    @Override
+    public int count() {
+        return contactRepository.count();
     }
 
 

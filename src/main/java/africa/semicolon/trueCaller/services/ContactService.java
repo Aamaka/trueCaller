@@ -10,4 +10,14 @@ public interface ContactService {
     void addContact(String firstName, String phoneNumber);
 
     Contact findByFirstName(String firstName);
+
+    Contact findByLastName(String lastName);
+
+    Contact findByPhoneNumber(String phoneNumber);
+
+    Contact update(Contact contact);
+
+    void delete(Contact contact);
+
+    int count();
 }

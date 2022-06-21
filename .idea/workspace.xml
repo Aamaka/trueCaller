@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36741394-46f5-424f-b832-cf055a9e513b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/data/models/Contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/data/repositories/ContactRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/exceptions/NoContactException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/trueCaller/services/ContactServiceImplTest.java" afterDir="false" />
+    <list default="true" id="36741394-46f5-424f-b832-cf055a9e513b" name="Changes" comment="assignment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/africa/semicolon/trueCaller/services/ContactServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/trueCaller/services/ContactServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,54 +59,7 @@
       <recent name="africa.semicolon.trueCaller.data.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ContactRepositoryImplTest">
-    <configuration name="ContactRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trueCaller" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.semicolon.trueCaller.exceptions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.ContactRepositoryImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactRepositoryImplTest.findByLastNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trueCaller" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.semicolon.trueCaller.exceptions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.ContactRepositoryImplTest" />
-      <option name="METHOD_NAME" value="findByLastNameTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactRepositoryImplTest.testToFindContactByPhoneNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trueCaller" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.semicolon.trueCaller.data.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.data.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.data.repositories.ContactRepositoryImplTest" />
-      <option name="METHOD_NAME" value="testToFindContactByPhoneNumber" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ContactServiceImplTest">
     <configuration name="ContactServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="trueCaller" />
       <extension name="coverage">
@@ -132,7 +75,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactServiceImplTest.testToFindByDifferentId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactServiceImplTest.findContactByPhoneNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="trueCaller" />
       <extension name="coverage">
         <pattern>
@@ -142,7 +85,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.services" />
       <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.services.ContactServiceImplTest" />
-      <option name="METHOD_NAME" value="testToFindByDifferentId" />
+      <option name="METHOD_NAME" value="findContactByPhoneNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactServiceImplTest.testToDeleteAContact" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.services.ContactServiceImplTest" />
+      <option name="METHOD_NAME" value="testToDeleteAContact" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactServiceImplTest.testToDeleteAndUpdateContact" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.services.ContactServiceImplTest" />
+      <option name="METHOD_NAME" value="testToDeleteAndUpdateContact" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactServiceImplTest.testToFindByLastName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trueCaller" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.trueCaller.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.trueCaller.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.trueCaller.services.ContactServiceImplTest" />
+      <option name="METHOD_NAME" value="testToFindByLastName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ContactRepositoryImplTest" />
-        <item itemvalue="JUnit.ContactRepositoryImplTest.testToFindContactByPhoneNumber" />
         <item itemvalue="JUnit.ContactServiceImplTest" />
-        <item itemvalue="JUnit.ContactServiceImplTest.testToFindByDifferentId" />
-        <item itemvalue="JUnit.ContactRepositoryImplTest.findByLastNameTest" />
+        <item itemvalue="JUnit.ContactServiceImplTest.testToDeleteAndUpdateContact" />
+        <item itemvalue="JUnit.ContactServiceImplTest.testToDeleteAContact" />
+        <item itemvalue="JUnit.ContactServiceImplTest.testToFindByLastName" />
+        <item itemvalue="JUnit.ContactServiceImplTest.findContactByPhoneNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -175,8 +166,25 @@
       <workItem from="1655594084513" duration="270000" />
       <workItem from="1655678352698" duration="6527000" />
       <workItem from="1655712330681" duration="1138000" />
-      <workItem from="1655714089093" duration="620000" />
+      <workItem from="1655714089093" duration="734000" />
+      <workItem from="1655767267269" duration="33000" />
+      <workItem from="1655843392246" duration="3721000" />
     </task>
+    <task id="LOCAL-00001" summary="assignment">
+      <created>1655722680601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655722680601</updated>
+    </task>
+    <task id="LOCAL-00002" summary="assignment">
+      <created>1655722731475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655722731476</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,5 +200,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="assignment" />
   </component>
 </project>

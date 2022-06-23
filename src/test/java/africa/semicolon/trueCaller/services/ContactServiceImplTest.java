@@ -26,7 +26,7 @@ class ContactServiceImplTest {
         assertEquals("asa",contact.getFirstName());
         assertEquals("bool",contact.getLastName());
         assertEquals("1234", contact.getPhoneNumber());
-//        assertEquals(1,contactRepository.count());
+
     }
 
     @Test

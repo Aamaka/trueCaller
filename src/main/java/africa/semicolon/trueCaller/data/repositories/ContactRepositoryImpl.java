@@ -40,10 +40,7 @@ public class ContactRepositoryImpl implements ContactRepository{
         ArrayList<Contact> me = new ArrayList<>();
         for (Contact contact: contacts){
             if(name.equalsIgnoreCase(contact.getFirstName()) || name.equalsIgnoreCase(contact.getLastName()) ) {
-                System.out.println("true false");
                 me.add(contact);
-
-                System.out.println(me.size());
             }
         }
         return me;

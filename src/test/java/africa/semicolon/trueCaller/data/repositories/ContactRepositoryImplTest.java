@@ -77,7 +77,6 @@ class ContactRepositoryImplTest {
 
     }
 
-
     @Test
     public void updateContactTest(){
         contact.setFirstName("Favour");
@@ -107,6 +106,7 @@ class ContactRepositoryImplTest {
         Contact find = contactRepository.findById(2);
         assertEquals("Ademola", find.getFirstName());
         assertEquals(2, contactRepository.count());
+
 
     }
 }

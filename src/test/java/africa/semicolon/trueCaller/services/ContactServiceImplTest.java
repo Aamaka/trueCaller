@@ -6,6 +6,8 @@ import africa.semicolon.trueCaller.data.repositories.ContactRepositoryImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ContactServiceImplTest {
@@ -58,9 +60,9 @@ class ContactServiceImplTest {
 
    @Test
     public void testToDeleteAndUpdateContact(){
-       contactService.addContact("asa", "faith", "1234");
+       contactService.addContact("bola", "faith", "1234");
        contactService.addContact("bae", "bola","4567");
-       contactService.addContact("kemi", "peace", "1567");
+       contactService.addContact("bola", "peace", "1567");
        Contact contact = contactService.findById(3);
        assertEquals("peace", contact.getLastName());
        contactService.delete(contact);
@@ -72,6 +74,17 @@ class ContactServiceImplTest {
        Contact contact2 = contactService.update(contact1);
        assertEquals("nut", contact2.getLastName());
        assertEquals(2, contactService.count());
+
+   }
+
+   @Test
+    public void findMyName(){
+       contactService.addContact("bola", "faith", "1234");
+       contactService.addContact("bae", "bola","4567");
+       contactService.addContact("bola", "peace", "1567");
+       Contact contact = contactService.findById(3);
+       ArrayList<Contact> find = contactService.findName("bola");
+       assertEquals("", find.toString());
    }
 
 }

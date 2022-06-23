@@ -2,6 +2,8 @@ package africa.semicolon.trueCaller.services;
 
 import africa.semicolon.trueCaller.data.models.Contact;
 
+import java.util.ArrayList;
+
 public interface ContactService {
     void addContact(String firstName, String lastName, String phoneNumber);
 
@@ -18,4 +20,9 @@ public interface ContactService {
     void delete(Contact contact);
 
     int count();
+
+    ArrayList<Contact> findName(String name);
+
 }
+
+

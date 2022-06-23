@@ -15,8 +15,6 @@ public interface ContactRepository {
     void delete(Contact contact);
 
 
-
-
     ArrayList<Contact> findByName(String name);
     Contact findByPhoneNumber(String phoneNumber);
 }

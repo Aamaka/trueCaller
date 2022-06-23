@@ -4,11 +4,11 @@ import africa.semicolon.trueCaller.data.models.Contact;
 import africa.semicolon.trueCaller.data.repositories.ContactRepository;
 import africa.semicolon.trueCaller.data.repositories.ContactRepositoryImpl;
 
+import java.util.ArrayList;
+
 public class ContactServiceImpl implements ContactService{
 
     private final ContactRepository contactRepository = new ContactRepositoryImpl();
-
-
 
     @Override
     public void addContact(String firstName, String lastName, String phoneNumber) {
@@ -33,7 +33,6 @@ public class ContactServiceImpl implements ContactService{
 
     }
 
-
     @Override
     public Contact findByPhoneNumber(String phoneNumber) {
         return contactRepository.findByPhoneNumber(phoneNumber);
@@ -47,6 +46,11 @@ public class ContactServiceImpl implements ContactService{
     @Override
     public int count() {
         return contactRepository.count();
+    }
+
+    @Override
+    public ArrayList<Contact> findName(String name) {
+        return contactRepository.findByName(name);
     }
 
 

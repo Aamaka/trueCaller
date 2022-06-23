@@ -3,18 +3,20 @@ package africa.semicolon.trueCaller.data.repositories;
 import africa.semicolon.trueCaller.data.models.Contact;
 import africa.semicolon.trueCaller.exceptions.NoContactException;
 
+import java.util.ArrayList;
+
 public interface ContactRepository {
     Contact save(Contact contact);
     int count();
-    Contact findByFirstName(String firstName);
+
     Contact findById(int id);
 
-    Contact findByLastName(String lastName) throws NoContactException;
 
     void delete(Contact contact);
 
 
-    Contact update(Contact contact);
 
+
+    ArrayList<Contact> findByName(String name);
     Contact findByPhoneNumber(String phoneNumber);
 }

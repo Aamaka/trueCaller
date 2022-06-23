@@ -9,8 +9,12 @@ public class ContactRepositoryImpl implements ContactRepository{
     ArrayList<Contact> contacts = new ArrayList<>();
     @Override
     public Contact save(Contact contact) {
-        contact.setId(contacts.size() + 1);
-        contacts.add(contact);
+        if(contact.getId() != 0){
+            update(contact);
+        }else {
+            contact.setId(contacts.size() + 1);
+            contacts.add(contact);
+            return contact;}
         return contact;
     }
 
@@ -19,28 +23,12 @@ public class ContactRepositoryImpl implements ContactRepository{
         return contacts.size();
     }
 
-    @Override
-    public Contact findByFirstName(String firstName) {
-        for (Contact contact : contacts) {
-            if (contact.getFirstName().equals(firstName)) {
-                return contact;
-            }
-        }
-        throw new NoContactException("No contact found");
-    }
 
     @Override
     public Contact findById(int id) {
         return contacts.get(id - 1);
     }
 
-    @Override
-    public Contact findByLastName(String lastName){
-        for (Contact contact : contacts){
-            if(contact.getLastName().equals(lastName))return contact;
-        }
-        throw new NoContactException("No contact found");
-    }
 
     @Override
     public void delete(Contact contact) {
@@ -48,7 +36,21 @@ public class ContactRepositoryImpl implements ContactRepository{
     }
 
     @Override
-    public Contact update(Contact contact) {
+    public ArrayList<Contact> findByName(String name) {
+        ArrayList<Contact> me = new ArrayList<>();
+        for (Contact contact: contacts){
+            if(name.equalsIgnoreCase(contact.getFirstName()) || name.equalsIgnoreCase(contact.getLastName()) ) {
+                System.out.println("true false");
+                me.add(contact);
+
+                System.out.println(me.size());
+            }
+        }
+        return me;
+    }
+
+
+     private Contact update(Contact contact) {
         contacts.set(contact.getId() - 1, contact);
         return contact;
     }

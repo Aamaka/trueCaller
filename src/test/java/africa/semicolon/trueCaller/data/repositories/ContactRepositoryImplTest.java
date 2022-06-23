@@ -1,9 +1,11 @@
 package africa.semicolon.trueCaller.data.repositories;
 
 import africa.semicolon.trueCaller.data.models.Contact;
-import africa.semicolon.trueCaller.exceptions.NoContactException;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -55,47 +57,26 @@ class ContactRepositoryImplTest {
         assertEquals("Samson", foundContact2.getFirstName());
     }
 
+
+
     @Test
     public void findByFirstNameTest(){
+        contact.setLastName("Simon");
         contact.setFirstName("Sam");
-
         Contact savedContact = contactRepository.save(contact);
-        Contact foundContact = contactRepository.findByFirstName("Sam");
-        assertEquals(1, foundContact.getId());
+
+        Contact contact2 = new Contact();
+        contact2.setLastName("Sam");
+        contact2.setFirstName("simon");
+        Contact savedContact1 = contactRepository.save(contact2);
+        ArrayList<Contact> foundContact = contactRepository.findByName("Sam");
+
+
+        assertEquals("", foundContact.toString());
+
 
     }
 
-    @Test
-    public void findByLastNameTest(){
-        contact.setFirstName("Favour");
-        contact.setLastName("bae");
-        assertEquals(0, contactRepository.count());
-
-        Contact save = contactRepository.save(contact);
-
-        Contact findMyContact = contactRepository.findByLastName("bae");
-        assertThrows(NoContactException.class,()->contactRepository.findByLastName("bay"));
-        assertEquals(1,findMyContact.getId());
-
-        Contact find = contactRepository.findByFirstName("Favour");
-        assertEquals(1, find.getId());
-        assertEquals(1, contactRepository.count());
-    }
-
-    @Test
-    public void deleteContactTest(){
-        contact.setFirstName("Favour");
-        contact.setLastName("bae");
-        assertEquals(0, contactRepository.count());
-
-        Contact save = contactRepository.save(contact);
-
-
-        Contact findMyContact = contactRepository.findByLastName("bae");
-        assertEquals(1,findMyContact.getId());
-        contactRepository.delete(findMyContact);
-        assertEquals(0, contactRepository.count());
-    }
 
     @Test
     public void updateContactTest(){
@@ -117,7 +98,7 @@ class ContactRepositoryImplTest {
         findMyContact.setFirstName("Amaka");
         findMyContact.setLastName("babe");
 
-        Contact updated = contactRepository.update(findMyContact);
+        Contact updated = contactRepository.save(findMyContact);
 
         assertEquals(1,updated.getId());
         assertEquals("Amaka",updated.getFirstName());
@@ -128,40 +109,9 @@ class ContactRepositoryImplTest {
         assertEquals(2, contactRepository.count());
 
     }
-
-    @Test
-    public void testToFindContactByPhoneNumber(){
-        Contact contact3 = new Contact();
-        contact3.setPhoneNumber("7456");
-        contact3.setFirstName("Ada");
-
-        contact.setPhoneNumber("1234");
-        contact.setFirstName("Favour");
-        contact.setLastName("bae");
-
-        Contact contact4 = contactRepository.save(contact3);
-        Contact contact5 = contactRepository.findByPhoneNumber("7456");
-        assertEquals(1, contact5.getId());
-        assertEquals("Ada", contact5.getFirstName());
-
-
-
-        Contact contact1 = contactRepository.save(contact);
-        Contact contact2 = contactRepository.findByPhoneNumber("1234");
-        assertThrows(NoContactException.class, ()-> contactRepository.findByPhoneNumber("7777"));
-        assertEquals(2, contact2.getId());
-        assertEquals("bae", contact2.getLastName());
-
-        contact.setPhoneNumber("12345");
-        Contact contact6 = contactRepository.update(contact);
-        assertEquals("12345", contact6.getPhoneNumber());
-
-        assertEquals("12345", contact.getPhoneNumber());
-        assertEquals("bae", contact.getLastName());
-        Contact contact7 = contactRepository.findByPhoneNumber("12345");
-        assertEquals(2, contact7.getId());
-
-    }
-
 }
+
+
+
+
 

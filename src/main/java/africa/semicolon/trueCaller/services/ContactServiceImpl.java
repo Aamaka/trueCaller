@@ -2,14 +2,13 @@ package africa.semicolon.trueCaller.services;
 
 import africa.semicolon.trueCaller.data.models.Contact;
 import africa.semicolon.trueCaller.data.repositories.ContactRepository;
+import africa.semicolon.trueCaller.data.repositories.ContactRepositoryImpl;
 
 public class ContactServiceImpl implements ContactService{
 
-    private final ContactRepository contactRepository;
+    private final ContactRepository contactRepository = new ContactRepositoryImpl();
 
-    public ContactServiceImpl(ContactRepository contactRepository) {
-        this.contactRepository = contactRepository;
-    }
+
 
     @Override
     public void addContact(String firstName, String lastName, String phoneNumber) {
@@ -29,23 +28,15 @@ public class ContactServiceImpl implements ContactService{
     }
 
     @Override
-    public Contact findByFirstName(String firstName) {
-        return contactRepository.findByFirstName(firstName);
+    public Contact update(Contact contact) {
+       return contactRepository.save(contact);
+
     }
 
-    @Override
-    public Contact findByLastName(String lastName) {
-        return contactRepository.findByLastName(lastName);
-    }
 
     @Override
     public Contact findByPhoneNumber(String phoneNumber) {
         return contactRepository.findByPhoneNumber(phoneNumber);
-    }
-
-    @Override
-    public Contact update(Contact contact) {
-        return contactRepository.update(contact);
     }
 
     @Override

@@ -1,16 +1,17 @@
 package africa.semicolon.trueCaller.controllers;
 
 import africa.semicolon.trueCaller.services.ContactService;
-//import africa.semicolon.trueCaller.services.ContactServiceImpl;
-import africa.semicolon.trueCaller.services.ContactServiceImpl;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ContactController {
-    private ContactService contactService = new ContactServiceImpl();
+    @Autowired
+    private ContactService contactService;
 
     @PostMapping("/contact")
     public String addContact(@RequestBody RequestDto requestDto){

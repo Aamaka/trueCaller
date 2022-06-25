@@ -2,19 +2,30 @@ package africa.semicolon.trueCaller.data.repositories;
 
 import africa.semicolon.trueCaller.data.models.Contact;
 import africa.semicolon.trueCaller.exceptions.NoContactException;
-
-import java.util.ArrayList;
-
-public interface ContactRepository {
-    Contact save(Contact contact);
-    int count();
-
-    Contact findById(int id);
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 
-    void delete(Contact contact);
+import java.util.List;
+import java.util.Optional;
 
+public interface ContactRepository extends MongoRepository<Contact, String> {
 
-    ArrayList<Contact> findByName(String name);
+    List<Contact> findContactByFirstName(String firstName);
+    List<Contact> findContactByLastName(String lastName);
     Contact findByPhoneNumber(String phoneNumber);
+
+    @Override
+    Optional<Contact> findById(String id);
+
+    //    Contact save(Contact contact);
+//    int count();
+//
+//    Contact findById(int id);
+
+
+//    void delete(Contact contact);
+
+
+//    ArrayList<Contact> findByName(String name);
+//    Contact findByPhoneNumber(String phoneNumber);
 }

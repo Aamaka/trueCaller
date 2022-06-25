@@ -2,14 +2,20 @@ package africa.semicolon.trueCaller.services;
 
 import africa.semicolon.trueCaller.data.models.Contact;
 import africa.semicolon.trueCaller.data.repositories.ContactRepository;
-import africa.semicolon.trueCaller.data.repositories.ContactRepositoryImpl;
+
+import africa.semicolon.trueCaller.exceptions.NoContactException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
+@Service
 public class ContactServiceImpl implements ContactService{
 
-    private final ContactRepository contactRepository = new ContactRepositoryImpl();
-
+    @Autowired
+    private  ContactRepository contactRepository;
     @Override
     public void addContact(String firstName, String lastName, String phoneNumber) {
         Contact contact = new Contact(firstName,lastName,phoneNumber);
@@ -17,8 +23,11 @@ public class ContactServiceImpl implements ContactService{
     }
 
     @Override
-    public Contact findById(int i) {
-        return contactRepository.findById(i);
+    public Contact findById(String id) {
+         Optional<Contact>  found = contactRepository.findById(id);
+        if (found.isEmpty()) throw  new NoContactException("No contact found");
+        return found.get();
+
     }
 
     @Override
@@ -44,13 +53,11 @@ public class ContactServiceImpl implements ContactService{
     }
 
     @Override
-    public int count() {
-        return contactRepository.count();
-    }
-
-    @Override
-    public ArrayList<Contact> findName(String name) {
-        return contactRepository.findByName(name);
+    public List<Contact> findName(String name) {
+        List<Contact> result = new ArrayList<>();
+        result.addAll(contactRepository.findContactByFirstName(name));
+        result.addAll(contactRepository.findContactByLastName(name));
+        return result;
     }
 
 

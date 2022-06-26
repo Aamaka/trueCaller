@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36741394-46f5-424f-b832-cf055a9e513b" name="Changes" comment="assignment">
+    <list default="true" id="36741394-46f5-424f-b832-cf055a9e513b" name="Changes" comment="springboot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/PlayMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/PlayMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/controllers/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/controllers/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/data/models/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/data/models/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/data/repositories/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/data/repositories/ContactRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/trueCaller/services/ContactServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/trueCaller/data/repositories/ContactRepositoryImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/africa/semicolon/trueCaller/services/ContactServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/trueCaller/services/ContactServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +50,8 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "616e11c1df7dd061e1b436af7b29ae86"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -179,7 +170,8 @@
       <workItem from="1655714089093" duration="734000" />
       <workItem from="1655767267269" duration="33000" />
       <workItem from="1655843392246" duration="5291000" />
-      <workItem from="1655850340047" duration="52429000" />
+      <workItem from="1655850340047" duration="53546000" />
+      <workItem from="1656159194966" duration="2649000" />
     </task>
     <task id="LOCAL-00001" summary="assignment">
       <created>1655722680601</created>
@@ -244,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655974738194</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="springboot">
+      <created>1656138451326</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1656138451326</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +262,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="assignment" />
+    <MESSAGE value="springboot" />
+    <option name="LAST_COMMIT_MESSAGE" value="springboot" />
   </component>
 </project>

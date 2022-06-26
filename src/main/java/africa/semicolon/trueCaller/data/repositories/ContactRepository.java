@@ -17,15 +17,4 @@ public interface ContactRepository extends MongoRepository<Contact, String> {
     @Override
     Optional<Contact> findById(String id);
 
-    //    Contact save(Contact contact);
-//    int count();
-//
-//    Contact findById(int id);
-
-
-//    void delete(Contact contact);
-
-
-//    ArrayList<Contact> findByName(String name);
-//    Contact findByPhoneNumber(String phoneNumber);
 }
